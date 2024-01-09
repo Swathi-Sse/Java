@@ -1,0 +1,26 @@
+import java.util.*;
+public class llrem {
+    public static void main(String args[]) {
+        LinkedList<String> al = new LinkedList<String>();
+        al.add("Apple");
+        al.add("Mango");
+        al.add("Orange");
+        al.add("Banana");
+        System.out.println("List before removal:");
+        for (String element : al) {
+            System.out.println(element);
+        }
+        Iterator<String> itr = al.iterator();
+        while (itr.hasNext()) {
+            String currentElement = itr.next();
+            if (currentElement.equals("Orange")) {
+                itr.remove();
+            }
+        }
+        System.out.println("\nList after removal:");
+        for (String element : al) {
+            System.out.println(element);
+        }
+    }
+}
+

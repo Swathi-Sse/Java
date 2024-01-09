@@ -1,0 +1,19 @@
+import java.util.*;
+public class Treeset_addrem {
+    public static void main(String[] args) {
+        TreeSet<String> treeSet = new TreeSet<>();
+        treeSet.add("Apple");
+        treeSet.add("Mango");
+        treeSet.add("Orange");
+        treeSet.add("Banana");
+        System.out.println("Set before removal:");
+        for (String element : treeSet) {
+            System.out.println(element);
+        }
+        treeSet.remove("Orange");
+        System.out.println("\nSet after removal:");
+        for (String element : treeSet) {
+            System.out.println(element);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Iterator;
+public class queue_addrem {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Apple");
+        queue.add("Mango");
+        queue.add("Orange");
+        queue.add("Banana");
+        System.out.println("Queue before removal:");
+        for (String element : queue) {
+            System.out.println(element);
+        }
+        Iterator<String> iterator = queue.iterator();
+        while (iterator.hasNext()) {
+            String currentElement = iterator.next();
+            if (currentElement.equals("Orange")) {
+                iterator.remove();
+            }
+        }
+        System.out.println("\nQueue after removal:");
+        for (String element : queue) {
+            System.out.println(element);
+        }
+    }
+}

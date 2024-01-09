@@ -1,0 +1,29 @@
+import java.util.Stack;
+public class stack_addrem {
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<>();
+        stack.push("Apple");
+        stack.push("Mango");
+        stack.push("Orange");
+        stack.push("Banana");
+        System.out.println("Stack before removal:");
+        for (String element : stack) {
+            System.out.println(element);
+        }
+        Stack<String> tempStack = new Stack<>();
+        while (!stack.isEmpty()) {
+            String currentElement = stack.pop();
+            if (!currentElement.equals("Orange")) {
+                tempStack.push(currentElement);
+            }
+        }
+        while (!tempStack.isEmpty()) {
+            stack.push(tempStack.pop());
+        }
+        System.out.println("\nStack after removal:");
+        for (String element : stack) {
+            System.out.println(element);
+        }
+    }
+}
+S

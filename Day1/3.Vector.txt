@@ -1,0 +1,25 @@
+import java.util.*;
+public class Vector_add_rem {
+    public static void main(String[] args) {
+        Vector<String> vector = new Vector<>();
+        vector.add("Apple");
+        vector.add("Mango");
+        vector.add("Orange");
+        vector.add("Banana");
+        System.out.println("Vector before removal:");
+        for (String element : vector) {
+            System.out.println(element);
+        }
+        Iterator<String> iterator = vector.iterator();
+        while (iterator.hasNext()) {
+            String currentElement = iterator.next();
+            if (currentElement.equals("Orange")) {
+                iterator.remove();
+            }
+        }
+        System.out.println("\nVector after removal:");
+        for (String element : vector) {
+            System.out.println(element);
+        }
+    }
+}
